@@ -16,7 +16,7 @@ pipeline {
         stage('execute') {
             steps {
                 bat label: '', script:  '''git clone https://github.com/vsk-coding/helloworld.git
-                cd hellworld
+                cd helloworld
                 python helloworld.py
                 cd slavetest
                 python slave.py'''
