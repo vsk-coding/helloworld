@@ -1,0 +1,24 @@
+pipeline {
+    
+    
+    agent {
+        label 'WindowsSlave'
+        
+    }
+
+    stages {
+        stage('clean workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+    
+        stage('execute') {
+            steps {
+                bat label: '', script:  '''git clone https://github.com/vsk-coding/hellopython.git
+                cd hellopython
+                python helloworld.py'''
+            }
+        }
+    }
+}
