@@ -6,3 +6,8 @@ print("now another test ")
 print("on pipeline demo")
 print("is this working")
 print("hey there!")
+
+
+def foo(bar=[]):        
+  bar.append("baz")    
+  return bar
