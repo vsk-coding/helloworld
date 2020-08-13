@@ -9,6 +9,14 @@ pipeline {
                 cleanWs()
             }
         }
+        stage('clone')
+        {
+            steps
+            {
+                sh ' git clone https://github.com/vsk-coding/helloworld.git '
+            }
+        }
+        
         stage('Code Quality Check via SonarQube')
         {
             steps
