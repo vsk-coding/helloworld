@@ -9,6 +9,12 @@ pipeline {
                 cleanWs()
             }
         }
+        stage("Code Checkout from Github") {
+            steps {
+                git branch: 'master',
+                url: 'https://github.com/vsk-coding/helloworld.git'
+            }
+        }      
         stage('Code Quality Check via SonarQube')
         {
             steps
@@ -20,7 +26,7 @@ pipeline {
                             sh ''' /opt/sonar-scanner/bin/sonar-scanner \
                             -Dsonar.projectKey=sample-test \
                             -Dsonar.sources=. \
-                            -Dsonar.host.url=http://192.168.101.12:9000/ \
+                            -Dsonar.host.url=http://172.17.0.3:9000/ \
                             -Dsonar.login=e48e73ab578155675f96f269ccedaeb39fa899cb '''
                     }
                 }
