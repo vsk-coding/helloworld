@@ -13,11 +13,11 @@ pipeline {
             steps {
                 script {
                     withSonarQubeEnv("sonar") {
-                            sh "sonar-scanner \
-                            -Dsonar.projectKey=sample-test \
-                            -Dsonar.sources=. \
-                            -Dsonar.host.url=https://54163171a8d9.ngrok.io \
-                            -Dsonar.login=451c541329a7f6c416fa593084b7d475cce35cfe
+                            sh ''' sonar-scanner 
+                            -Dsonar.projectKey=sample-test 
+                            -Dsonar.sources=. 
+                            -Dsonar.host.url=https://54163171a8d9.ngrok.io 
+                            -Dsonar.login=451c541329a7f6c416fa593084b7d475cce35cfe '''
                     }
                 }
             }
