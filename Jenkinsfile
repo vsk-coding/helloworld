@@ -1,18 +1,22 @@
 pipeline {
-    
-    
     agent any
-
-    stages {
-        stage('clean workspace') {
-            steps {
+    stages
+    {
+        stage('clean workspace')
+        {
+            steps
+            {
                 cleanWs()
             }
         }
-        stage('Code Quality Check via SonarQube') {
-            steps {
-                script {
-                    withSonarQubeEnv("sonar") {
+        stage('Code Quality Check via SonarQube')
+        {
+            steps
+            {
+                script
+                {
+                    withSonarQubeEnv("sonar")
+                    {
                             sh ''' /opt/sonar/bin/sonar-scanner \
                             -Dsonar.projectKey=sample-test \
                             -Dsonar.sources=. \
@@ -22,5 +26,5 @@ pipeline {
                 }
             }
         }
-    
+    }
 }
