@@ -17,7 +17,7 @@ pipeline {
                 {
                     withSonarQubeEnv("sonar")
                     {
-                            sh ''' /opt/sonar/bin/sonar-scanner \
+                            sh ''' /opt/sonarqube/bin/sonar-scanner \
                             -Dsonar.projectKey=sample-test \
                             -Dsonar.sources=. \
                             -Dsonar.host.url=https://192.168.101.12:9000 \
