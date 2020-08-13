@@ -13,8 +13,8 @@ pipeline {
             steps {
                 git branch: 'master',
                 url: 'https://github.com/vsk-coding/helloworld.git'
-        }
-               
+            }
+        }      
         stage('Code Quality Check via SonarQube')
         {
             steps
