@@ -12,7 +12,6 @@ pipeline {
         stage('Code Quality Check via SonarQube') {
             steps {
                 script {
-                    def scannerHome = tool 'sonar';
                     withSonarQubeEnv("sonar") {
                             sh "sonar-scanner \
                             -Dsonar.projectKey=sample-test \
