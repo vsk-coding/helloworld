@@ -15,7 +15,7 @@ pipeline {
             {
                 script
                 {
-                    withSonarQubeEnv("sonar")
+                    withSonarQubeEnv("sonar-scanner")
                     {
                             sh ''' /opt/sonarqube/bin/sonar-scanner \
                             -Dsonar.projectKey=sample-test \
