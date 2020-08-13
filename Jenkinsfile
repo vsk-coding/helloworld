@@ -11,7 +11,7 @@ pipeline {
         }
         stage("Code Checkout from Github") {
             steps {
-                git branch: 'master',
+                git branch: 'test',
                 url: 'https://github.com/vsk-coding/helloworld.git'
             }
         }      
