@@ -26,7 +26,7 @@ pipeline {
                             sh ''' /opt/sonar-scanner/bin/sonar-scanner \
                             -Dsonar.projectKey=sample-test \
                             -Dsonar.projectName=sample \
-                            -Dsonar.sources=https://github.com/vsk-coding/helloworld.git \
+                            -Dsonar.sources=. \
                             -Dsonar.host.url=http://172.17.0.3:9000/ \
                             -Dsonar.login=e48e73ab578155675f96f269ccedaeb39fa899cb '''
                     }
