@@ -17,7 +17,7 @@ pipeline {
                 {
                     withSonarQubeEnv("sonar-scanner")
                     {
-                            sh ''' /opt/sonarqube/bin/sonar-scanner \
+                            sh ''' /opt/sonar-scanner/bin/sonar-scanner \
                             -Dsonar.projectKey=sample-test \
                             -Dsonar.projectName=sample
                             -Dsonar.sources=. \
